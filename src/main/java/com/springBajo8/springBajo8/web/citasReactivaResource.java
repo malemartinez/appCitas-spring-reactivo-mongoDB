@@ -48,4 +48,12 @@ public class citasReactivaResource {
         return this.icitasReactivaService.findAll();
     }
 
+    //Cancelar una cita
+    @PutMapping("/citasReactivas/cancelar/{id}")
+    private Mono<ResponseEntity<citasDTOReactiva>> updateEstadoCita(@PathVariable("id") String id, @RequestBody citasDTOReactiva citasDTOReactiva) {
+        return this.icitasReactivaService.update(id, citasDTOReactiva)
+                .flatMap(citasDTOReactiva1 -> Mono.just(ResponseEntity.ok(citasDTOReactiva1)))
+                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+
+    }
 }
