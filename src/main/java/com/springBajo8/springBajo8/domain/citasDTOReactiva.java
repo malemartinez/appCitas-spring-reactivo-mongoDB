@@ -29,6 +29,26 @@ public class citasDTOReactiva {
 
     private String estadoReservaCita;
 
+//    private citasDTOReactiva(String id, String idPaciente, String nombrePaciente, String apellidosPaciente, String nombreMedico, String apellidosMedico, String fechaReservaCita, String horaReservaCita, String estadoReservaCita) {
+//        this.id = id;
+//        this.idPaciente = idPaciente;
+//        this.nombrePaciente = nombrePaciente;
+//        this.apellidosPaciente = apellidosPaciente;
+//        this.nombreMedico = nombreMedico;
+//        this.apellidosMedico = apellidosMedico;
+//        this.fechaReservaCita = fechaReservaCita;
+//        this.horaReservaCita = horaReservaCita;
+//        this.estadoReservaCita = estadoReservaCita;
+//    }
+//
+//    public static citasDTOReactiva from(
+//            String id, String idPaciente, String nombrePaciente, String apellidosPaciente, String nombreMedico, String apellidosMedico, String fechaReservaCita, String horaReservaCita, String estadoReservaCita
+//    ) {
+//        citasDTOReactiva citaMEdica = new citasDTOReactiva(
+//                id, idPaciente, nombrePaciente,
+//        )
+//    }
+
     public String getId() {
         return id;
     }
@@ -101,7 +121,21 @@ public class citasDTOReactiva {
         this.estadoReservaCita = estadoReservaCita;
     }
 
-    //private Date sendedDate = new Date();
+    @Override
+    public String toString() {
+        return "citasDTOReactiva{" +
+                "id='" + id + '\'' +
+                ", idPaciente='" + idPaciente + '\'' +
+                ", nombrePaciente='" + nombrePaciente + '\'' +
+                ", apellidosPaciente='" + apellidosPaciente + '\'' +
+                ", nombreMedico='" + nombreMedico + '\'' +
+                ", apellidosMedico='" + apellidosMedico + '\'' +
+                ", fechaReservaCita='" + fechaReservaCita + '\'' +
+                ", horaReservaCita='" + horaReservaCita + '\'' +
+                ", estadoReservaCita='" + estadoReservaCita + '\'' +
+                '}';
+    }
+//private Date sendedDate = new Date();
 
 
 }
